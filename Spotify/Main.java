@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -57,10 +58,20 @@ public class Main {
                     System.out.println("Ingrese el título de la cancion: ");
                     System.out.println();
                     String titulo = scanner.nextLine();
-                    System.out.println("Ingrese la duración de la cancion: ");
+                    System.out.println("Ingrese la duración de la canción en minutos (Utilice coma para separar decimales): ");
                     System.out.println();
-                    int duracion = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline left-over
+                    float duracion = 0;
+                    boolean validInput = false;
+                    while (!validInput) {
+                        try {
+                            duracion = scanner.nextFloat();
+                            scanner.nextLine();  // Consume newline left-over
+                            validInput = true;
+                        } catch (InputMismatchException e) {
+                            System.out.println("Utilice punto para separar decimales.");
+                            scanner.nextLine();  // Consume newline left-over
+                        }
+                    }
                     Cancion cancion = new Cancion(titulo, duracion);
                     listaDeAlbumes.get(indiceAlbum).agregarCancion(cancion);
                     break;
