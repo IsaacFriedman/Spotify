@@ -1,9 +1,9 @@
 public class Cancion {
     private String titulo;
-    private float duracion;
+    private String duracion;
 
     // Constructor
-    public Cancion(String titulo, float duracion) {
+    public Cancion(String titulo, String duracion) {
         this.titulo = titulo;
         this.duracion = duracion;
     }
@@ -13,7 +13,10 @@ public class Cancion {
         return titulo;
     }
 
-    public float getDuracion() {
-        return duracion;
+    public String getDuracion() {
+    
+    return duracion;
+
     }
 }
+

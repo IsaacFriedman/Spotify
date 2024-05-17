@@ -18,7 +18,6 @@ public class Album {
     }
 
     // Getters and setters
-
     public String getNombre() {
         return nombre;
     }
@@ -82,7 +81,7 @@ public class Album {
 
     public static Album crearAlbum(String nombre, int añoLanzamiento, String disquera, String[] artistas) {
         // Verificar que el nombre no esté vacío
-        if (nombre == null || nombre.trim().isEmpty()) {
+       /*/ if (nombre == null || nombre.trim().isEmpty()) {
             System.out.println("El nombre del álbum no puede estar vacío.");
             return null;
         }
@@ -103,7 +102,7 @@ public class Album {
         if (añoLanzamiento < 0 || añoLanzamiento > 2024) {
             System.out.println("El año de lanzamiento no puede ser negativo ni mayor que 2024.");
             return null;
-        }
+        }*/
 
         return new Album(nombre, añoLanzamiento, disquera, artistas);
     }
