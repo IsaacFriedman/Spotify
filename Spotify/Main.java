@@ -3,11 +3,15 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * La clase Main es la clase principal del programa que permite interactuar con un almacén de álbumes de música.
+ * Proporciona un menú de opciones para crear álbumes, agregar canciones a un álbum, ver la lista de canciones de un álbum
+ * y buscar álbumes por año de lanzamiento.
+ */
 public class Main {
     public static void main(String[] args) {
         List<Album> listaDeAlbumes = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
             
             while (true) {
@@ -18,12 +22,10 @@ public class Main {
                 System.out.println("3. Ver lista de canciones de un album");
                 System.out.println("4. Buscar albumes por año");
                 System.out.println("5. Salir\n");
-
                 int opcion;
                 try {
                     opcion = scanner.nextInt();
                     scanner.nextLine();
-
                     if (opcion < 1 || opcion > 5 ) {
                         System.out.println("Opcion no valida. Intente de nuevo.\n");
                         continue;
@@ -33,12 +35,10 @@ public class Main {
                     scanner.nextLine();
                     continue;
                 }
-
                 if ((opcion == 2 || opcion == 3 || opcion == 4) && listaDeAlbumes.isEmpty()) {
                     System.out.println("No hay albumes registrados.\n");
                     continue;
                 }
-
                 switch (opcion) {
                     case 1:
                         String nombre;
@@ -51,7 +51,6 @@ public class Main {
                             }
                             break;
                         }
-
                         int año = 0;
                         boolean validYear = false;
                         while (!validYear) {
@@ -72,7 +71,6 @@ public class Main {
                                 System.out.println("Ingrese un número entero válido.\n");
                             }
                         }
-
                         String disquera;
                         while (true) {
                             System.out.println("Ingrese la disquera:\n");
@@ -83,7 +81,6 @@ public class Main {
                             }
                             break;
                         }
-
                         String[] artistas;
                         while (true) {
                             System.out.println("Ingrese los artistas (separados por coma en caso de ser 2 o más):\n");
@@ -97,7 +94,6 @@ public class Main {
                         Album album = Album.crearAlbum(nombre, año, disquera, artistas);
                         listaDeAlbumes.add(album);
                         break;
-
                     case 2:
                         int indiceAlbum;
                         while (true) {
@@ -121,7 +117,6 @@ public class Main {
                                 System.out.println("Ingrese un número entero válido.\n");
                             }
                         }
-
                         String titulo;
                         while (true) {
                             System.out.println("Ingrese el título de la canción:\n");
@@ -132,7 +127,6 @@ public class Main {
                             }
                             break;
                         }
-
                         System.out.println("Ingrese la duración de la canción en minutos (formato mm:ss):\n");
                         String duracion;
                         while (true) {
@@ -147,11 +141,9 @@ public class Main {
                             }
                             break;
                         }
-
                         Cancion cancion = new Cancion(titulo, duracion);
                         listaDeAlbumes.get(indiceAlbum).agregarCancion(cancion);
                         break;
-
                     case 3:
                         System.out.println("Seleccione el album que desea ver:\n");
                         for (int i = 0; i < listaDeAlbumes.size(); i++) {
@@ -178,7 +170,6 @@ public class Main {
                         }
                         listaDeAlbumes.get(indiceAlbumVer).mostrarAlbum();
                         break;
-
                     case 4:
                         int añoBuscar = 0;
                         boolean validYearBuscar = false;
@@ -202,18 +193,15 @@ public class Main {
                         }
                         Album.buscarPorAño(listaDeAlbumes, añoBuscar);
                         break;
-
                     case 5:
                         System.out.println("Saliendo...\n");
                         scanner.close();
                         return;
-
                     default:
                         System.out.println("Opcion no valida. Intente de nuevo.\n");
                         break;
                 }
             }
-
         }
     }
 }
