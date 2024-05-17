@@ -80,30 +80,6 @@ public class Album {
     }
 
     public static Album crearAlbum(String nombre, int añoLanzamiento, String disquera, String[] artistas) {
-        // Verificar que el nombre no esté vacío
-       /*/ if (nombre == null || nombre.trim().isEmpty()) {
-            System.out.println("El nombre del álbum no puede estar vacío.");
-            return null;
-        }
-
-        // Verificar que la disquera no esté vacía
-        if (disquera == null || disquera.trim().isEmpty()) {
-            System.out.println("La disquera no puede estar vacía.");
-            return null;
-        }
-
-        // Verificar que haya al menos un artista
-        if (artistas == null || artistas.length == 0) {
-            System.out.println("Debe haber al menos un artista.");
-            return null;
-        }
-
-        // Verificar que el año de lanzamiento no sea negativo ni mayor que 2024
-        if (añoLanzamiento < 0 || añoLanzamiento > 2024) {
-            System.out.println("El año de lanzamiento no puede ser negativo ni mayor que 2024.");
-            return null;
-        }*/
-
         return new Album(nombre, añoLanzamiento, disquera, artistas);
     }
 }
