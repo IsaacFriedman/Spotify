@@ -1,8 +1,11 @@
+import java.io.Serializable;
+
 /**
  * La clase `Cancion` representa una canción en la aplicación Spotify.
  * Contiene información sobre el título y la duración de la canción.
  */
-public class Cancion {
+public class Cancion implements Serializable{
+    private static final long serialVersionUID = 1L; // Agregar serialVersionUID
     private String titulo;
     private String duracion;
 
