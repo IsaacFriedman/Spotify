@@ -1,6 +1,6 @@
 # Spotify by SIM 
 <p align="center">
-  <img src="/Docs/Spotify_bySIM.png" alt="SIM-Isotipo" width="300" height="300"/>
+   <img src="/Docs/Spotify_bySIM.png" alt="Spotify_bySIM-Isotipo" width="250" height="250"/><br>
 </p>
 
 <p align="right">
@@ -22,7 +22,8 @@ El objetivo de Spotify by SIM es proporcionar a los usuarios una forma sencilla 
 Usuarios apasionados por la música que desean mantener un registro detallado de sus colecciones de álbumes y canciones.
 
 ## 2. Requisitos del Sistema
-### Hardware
+### El programa se puede ejecutar en 3.Ejecutable o en 4.IDE
+### **Hardware**
 - **Mínimo**: 
   - Procesador: 1 GHz o superior
   - RAM: 512 MB
@@ -38,9 +39,19 @@ Usuarios apasionados por la música que desean mantener un registro detallado de
   - Java Development Kit (JDK) 21
   - Visual Studio Code
 
-## 3. Instalación IDE
+## 3. Ejecución de Ejecutable
+### Instrucciones para la ejecución
+   **1.** Descargar el ejecutable de Spotify by SIM desde el repositorio de GitHub.
+   **2.** La dirección del ejecutable es: "./Spotify/out/artifacts/Spotify_jar/Spotify.jar"
+   **3.** Se procede a ejecutar el programa con el siguiente comando:
+   ```bash
+      java -jar "./ruta/del/ejecutable/Spotify.jar"
+   ```
+   **4.** Se recomienda guardar el ejecutable en una carpeta, debido a que se genera un archivo "albumes.txt" donde se guarda toda la información generada en la ejecución.
+
+## 4. Instalación IDE
 ### Instrucciones de Instalación
-**. Descargar e Instalar JDK 21**:
+**1. Descargar e Instalar JDK 21**:
    - Descarga el JDK 21 desde [OpenJDK21U-jdk_x64_windows_hotspot](https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.3+9/OpenJDK21U-jdk_x64_windows_hotspot_21.0.3_9.msi).
    - Ejecuta el instalador y sigue las instrucciones para completar la instalación.
 
@@ -58,19 +69,19 @@ Usuarios apasionados por la música que desean mantener un registro detallado de
     - Selecciona File -> Open Folder y elige la carpeta del proyecto clonado.
 
 ### Configuración Inicial
-1. Configurar el Entorno de Desarrollo:
+**1. Configurar el Entorno de Desarrollo**:
     - Instala la extensión de Java para Visual Studio Code si no está instalada.
     - Abre el archivo Main.java y verifica que todas las dependencias se resuelvan correctamente.
 
-2. Compilar y Ejecutar:
+**2. Compilar y Ejecutar**:
     - Abre el terminal en Visual Studio Code (View -> Terminal).
-    - Compila y ejecuta el programa usando los siguientes comandos:
+    - Compila y ejecuta el programa usando cualquiera de los siguientes comandos:
     ```bash
     java Main.java
     java Main
     ```
 
-## 4. Guía de Usuario
+## 5. Guía de Usuario
 ### Navegación
    - **Menú Principal**: Acceso a las funciones principales como agregar álbumes, ver álbumes y buscar por año.
    - **Vista de Álbumes**: Lista de todos los álbumes registrados.
@@ -104,12 +115,12 @@ Usuarios apasionados por la música que desean mantener un registro detallado de
    - Ingresa el año por el cual deseas buscar álbumes.
    - Se mostrarán los álbumes lanzados en el año especificado.
 
-## 5. Resolución de Problemas
+## 6. Resolución de Problemas
 ### Problemas Comunes
    - Error al iniciar el programa: Asegúrate de que todas las dependencias están instaladas correctamente y que el JDK está configurado en el PATH del sistema.
    - Canción duplicada: El sistema evita la adición de canciones con títulos repetidos en un mismo álbum. Verifica el título de la canción que intentas agregar.
 
-## 6. Apéndices 
+## 7. Apéndices 
 ### Glosario
    - Álbum: Colección de canciones agrupadas bajo un título común.
    - Canción: Composición musical registrada en un álbum
